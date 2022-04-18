@@ -3,48 +3,34 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
     <title>@ViewData["Title"] - WebApp</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+   @await Html.PartialAsync("_HeaderPartial") 
+    <link reel="stylesheet" href="_HeaderTemplate">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">WebApp</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a id="len1" class="hoverable" href="#">Administración de servicios</a></li>
+                    <li><a id="len2" class="hoverable" asp-page="">About</a></li>
+                    <li><a id="len3" class="hoverable" asp-page="">Servicios</a></li>
+                    <li><a id="len4" class="hoverable" asp-page="">Contact</a></li>
+                </ul>
             </div>
         </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        <div id="what-the-hell-is-this">
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - WebApp - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
+    </div>
+    @RenderBody()
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Ing. Karlo G., Mainor A.</p>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
+    @await Html.PartialAsync("_ScriptsPartial")
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
