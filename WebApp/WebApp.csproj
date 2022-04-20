@@ -110,4 +110,8 @@
     <TypeScriptCompile Include="wwwroot\Assets\Plugin\vue\VueLoaderTemplate.ts" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\App\Clientes\" />
+  </ItemGroup>
+
 </Project>
