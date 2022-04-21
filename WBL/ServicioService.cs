@@ -13,6 +13,7 @@ namespace WBL
         Task<DBEntity> CREATE(ServicioEntity entity);
         Task<DBEntity> DELETE(ServicioEntity entity);
         Task<IEnumerable<ServicioEntity>> GET();
+        Task<IEnumerable<ServicioEntity>> GETLISTA();
         Task<ServicioEntity> GETBYID(ServicioEntity entity);
         Task<DBEntity> UPDATE(ServicioEntity entity);
     }
@@ -34,6 +35,19 @@ namespace WBL
             try
             {
                 var result = sql.QueryAsync<ServicioEntity>(sp: "dbo.ServicioObtener");
+                return await result;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public async Task<IEnumerable<ServicioEntity>> GETLISTA()
+        {
+            try
+            {
+                var result = sql.QueryAsync<ServicioEntity>(sp: "dbo.ServicioLista");
                 return await result;
             }
             catch (Exception)

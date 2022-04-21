@@ -7,7 +7,7 @@ using Entity;
 using BD;
 namespace WBL
 {
-    public interface ISolicitudService1
+    public interface ISolicitudService
     {
         Task<DBEntity> CREATE(SolicitudEntity entity);
         Task<DBEntity> DELETE(SolicitudEntity entity);
@@ -16,7 +16,7 @@ namespace WBL
         Task<DBEntity> UPDATE(SolicitudEntity entity);
     }
 
-    public class SolicitudService : ISolicitudService1
+    public class SolicitudService : ISolicitudService
     {
         private readonly IDataAccess sql;
 
