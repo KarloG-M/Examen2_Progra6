@@ -1,4 +1,4 @@
-﻿namespace GridServicio {
+﻿namespace GridSolicitud {
 
     declare var MensajeApp;
 

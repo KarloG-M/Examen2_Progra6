@@ -10,8 +10,7 @@
 
             methods: {
                 Save() {
-                    if (BValidateData(this.Formulario))
-                    {
+                    if (BValidateData(this.Formulario)) {
                         Loading.fire("Guardando...");
 
                         App.AxiosProvider.GuardarSolicitud(this.Entity).then(data => {
@@ -23,7 +22,10 @@
                             } else {
                                 Toast.fire({ title: data.MsgError, icon: "error" })
                             }
-                    })
+                        });
+                    } else {
+                        Toast.fire({ title: "Complete los campos requeridos" })
+                    }
                 }
             },
             mounted() {

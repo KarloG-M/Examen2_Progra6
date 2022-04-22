@@ -21,10 +21,13 @@ var SolicitudEdit;
                         }
                     });
                 }
-            },
-            mounted: function () {
-                CreateValidator(this.Formulario);
+                else {
+                    Toast.fire({ title: "Complete los campos requeridos" });
+                }
             }
+        },
+        mounted: function () {
+            CreateValidator(this.Formulario);
         }
     });
     Formulario.$mount("#AppEdit");

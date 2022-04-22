@@ -29,7 +29,7 @@ namespace WebApp.Pages.Solicitud
         public SolicitudEntity Entity { get; set; } = new SolicitudEntity();
         public IEnumerable<ClienteEntity> ClienteLista { get; set; } = new List<ClienteEntity>();
         public IEnumerable<ServicioEntity> ServicioLista { get; set; } = new List<ServicioEntity>();
-        public IClienteService Cliente1 { get; }
+        public IClienteService Cliente { get; }
 
         public async Task<IActionResult> OnGet()
         {
@@ -39,11 +39,12 @@ namespace WebApp.Pages.Solicitud
                 {
                     Entity = await solicitud.GETBYID(new()
                     {
-                        IdCliente = id
+                        IdSolicitud = id
                     });
+                }
                     ClienteLista = await cliente.GETLISTA();
                     ServicioLista = await servicio.GETLISTA();
-                }
+                
 
                 return Page();
             }

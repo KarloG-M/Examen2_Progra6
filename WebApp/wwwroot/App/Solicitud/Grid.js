@@ -1,6 +1,6 @@
 "use strict";
-var GridServicio;
-(function (GridServicio) {
+var GridSolicitud;
+(function (GridSolicitud) {
     /*Muestra modal de mensaje*/
     if (MensajeApp != "") {
         Toast.fire({ icon: "success", title: MensajeApp });
@@ -14,8 +14,8 @@ var GridServicio;
             }
         });
     }
-    GridServicio.OnclickEliminar = OnclickEliminar;
+    GridSolicitud.OnclickEliminar = OnclickEliminar;
     /*Datable*/
     $("#GridView").DataTable();
-})(GridServicio || (GridServicio = {}));
+})(GridSolicitud || (GridSolicitud = {}));
 //# sourceMappingURL=Grid.js.map

@@ -9,32 +9,42 @@
         </div>
         <div class="card-body">
             <form id="FormEdit" method="post">
-                <input type="hidden" asp-for="Entity.IdSolicitud" v-model="Entity.IdSolicitud" /> <!-- se usa hidden por si se hara un edit  -->
+                <input type="hidden" asp-for="Entity.IdSolicitud" v-model="Entity.IdCliente" />
                 <!-- Lista Proveedor -->
                 <div class="form-group mb-3">
-                    <label for="Entity.IdCliente" class="form-label">Id Cliente</label>
-
+                    <label for="Entity.IdCliente" class="form-label">Cliente</label>
                     <select asp-for="Entity.IdCliente" class="form-select" v-model="Entity.IdCliente"
-                            asp-items="@(new SelectList(Model.SolicitudList,"IdSolicitud",""))" required>
+                            asp-items="@(new SelectList(Model.ClienteLista,"IdCliente", "Identificacion"))" required>
+                        <option value="value"></option>
                     </select>
                 </div>
-
+                <div class="form-group mb-3">
+                    <label for="Entity.IdServicio" class="form-label">Servicio</label>
+                    <select asp-for="Entity.IdServicio" class="form-select" v-model="Entity.IdServicio"
+                            asp-items="@(new SelectList(Model.ServicioLista,"IdServicio", "NombreServicio"))" required>
+                        <option value="value"></option>
+                    </select>
+                </div>
                 <!-- Campos de texto -->
                 <div class="form-group mb-3">
-                    <label for="Entity.Identificacion" class="form-label">Identificacion</label>
-                    <input type="text" class="form-control" asp-for="Entity.Identificacion" v-model="Entity.Identificacion" maxlength="250" required> <!-- maxlenght para obligar a un tamano -->
+                    <label for="Entity.Cantidad" class="form-label">Cantidad</label>
+                    <input type="text" class="form-control" asp-for="Entity.Cantidad" v-model="Entity.Cantidad" maxlength="250" required> <!-- maxlenght para obligar a un tamano -->
                 </div>
                 <div class="form-group mb-3">
-                    <label for="Entity.Nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" asp-for="Entity.Nombre" v-model="Entity.Nombre" maxlength="250" required>
+                    <label for="Entity.Monto" class="form-label">Monto</label>
+                    <input type="text" class="form-control" asp-for="Entity.Monto" v-model="Entity.Monto" maxlength="250" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="Entity.PrimerApellido" class="form-label">PrimerApellido</label>
-                    <input type="text" class="form-control" asp-for="Entity.PrimerApellido" v-model="Entity.PrimerApellido" maxlength="250" required>
+                    <label for="Entity.PrimerApellido" class="form-label">Fecha Entrega</label>
+                    <input type="text" class="form-control" asp-for="Entity.FechaEntrega" v-model="Entity.FechaEntrega" maxlength="250" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="Entity.SegundoApellido" class="form-label">SegundoApellido</label>
-                    <input type="text" class="form-control" asp-for="Entity.SegundoApellido" v-model="Entity.SegundoApellido" maxlength="250" required>
+                    <label for="Entity.UsuarioEntrega" class="form-label">Usuario Entrega</label>
+                    <input type="text" class="form-control" asp-for="Entity.UsuarioEntrega" v-model="Entity.UsuarioEntrega" maxlength="250" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="Entity.Observaciones" class="form-label">Observaciones</label>
+                    <input type="text" class="form-control" asp-for="Entity.Observaciones" v-model="Entity.Observaciones" maxlength="250" required>
                 </div>
 
                 <!-- boton -->
@@ -57,6 +67,6 @@
 <!-- se jala el ts para que se utilice -->
 @section Scripts{
 
-    <script src="~/App/Contacto/Edit.js"></script>
+    <script src="~/App/Solicitud/Edit.js"></script>
 
 }
