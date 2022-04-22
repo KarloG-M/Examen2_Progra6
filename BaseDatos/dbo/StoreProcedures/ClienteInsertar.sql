@@ -25,6 +25,7 @@ AS
 
 		INSERT INTO dbo.Cliente
 		(
+       
 		Identificacion 	,
 		IdTipoIdentificacion  ,
          Nombre ,
@@ -42,6 +43,7 @@ AS
 		)
 		VALUES
 		(
+        
         @Identificacion 	,
 		@IdTipoIdentificacion  ,
          @Nombre ,

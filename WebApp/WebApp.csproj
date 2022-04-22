@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\App\Clientes\Edit.ts" />
+    <Content Remove="wwwroot\App\Clientes\Grid.ts" />
+    <Content Remove="wwwroot\App\Servicios\Edit.ts" />
     <Content Remove="wwwroot\App\Servicios\Grid.ts" />
     <Content Remove="wwwroot\App\Solicitud\Edit.ts" />
     <Content Remove="wwwroot\App\Solicitud\Grid.ts" />
@@ -73,6 +76,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\App\Clientes\Edit.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Clientes\Grid.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Servicios\Edit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Servicios\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\App\Solicitud\Edit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Solicitud\Grid.ts" />
@@ -114,10 +120,10 @@
     <TypeScriptCompile Include="wwwroot\Assets\Plugin\vue\VueLoaderTemplate.ts" />
   </ItemGroup>
 
+
   <ItemGroup>
     <Folder Include="wwwroot\App\Clientes\" />
   </ItemGroup>
 
-  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
-
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtension
 </Project>

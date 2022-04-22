@@ -23,7 +23,10 @@ namespace Entity
         public int Pasaporte { get; set; }
         public int CuentaIBAN { get; set; }
         public string CorreoNotifica { get; set; }
-       
-   
+
+        public static implicit operator ClienteEntity(ServicioEntity v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

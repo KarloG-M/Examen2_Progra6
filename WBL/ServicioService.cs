@@ -1,4 +1,4 @@
-﻿using BD;
+
 using Entity;
 using System;
 using System.Collections.Generic;
@@ -16,6 +16,9 @@ namespace WBL
         Task<IEnumerable<ServicioEntity>> GETLISTA();
         Task<ServicioEntity> GETBYID(ServicioEntity entity);
         Task<DBEntity> UPDATE(ServicioEntity entity);
+        Task<DBEntity> UPDATE(ClienteEntity entity);
+        Task<DBEntity> CREATE(ClienteEntity entity);
+        Task<IEnumerable<ServicioEntity>> GETLISTA();
     }
 
     public class ServicioService : IServicioService
@@ -42,12 +45,12 @@ namespace WBL
 
                 throw;
             }
-        }
+        } master
         public async Task<IEnumerable<ServicioEntity>> GETLISTA()
         {
             try
             {
-                var result = sql.QueryAsync<ServicioEntity>(sp: "dbo.ServicioLista");
+
                 return await result;
             }
             catch (Exception)
@@ -55,7 +58,6 @@ namespace WBL
 
                 throw;
             }
-        }
         //Metodo GetById
         public async Task<ServicioEntity> GETBYID(ServicioEntity entity)
         {
@@ -140,6 +142,18 @@ namespace WBL
             }
 
         }
+
+        public Task<DBEntity> UPDATE(ClienteEntity entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<DBEntity> CREATE(ClienteEntity entity)
+        {
+            throw new NotImplementedException();
+        }
+
+       
         #endregion
     }
 

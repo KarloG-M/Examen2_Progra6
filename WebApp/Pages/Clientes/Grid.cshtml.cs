@@ -54,7 +54,7 @@ namespace WebApp.Pages.Clientes
                     throw new Exception(result.MsgError);
                 }
 
-                TempData["Msg"] = "El Servicio fue eliminado satisfactoriamente";
+                TempData["Msg"] = "El cliente fue eliminado satisfactoriamente";
 
                 return Redirect("Grid");
             }
