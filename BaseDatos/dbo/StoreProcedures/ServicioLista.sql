@@ -1,14 +1,15 @@
-﻿CREATE PROCEDURE [dbo].[ServicioLista]
-	AS
-BEGIN 
+﻿CREATE PROCEDURE [dbo].[Serviciolista]
+	@IdServicio int = NULL
+
+AS BEGIN
 	SET NOCOUNT ON
 
 	SELECT 
-	       IdServicio
-		   
-		 
-		 
-	FROM
-	    dbo.Servicio
+		IdServicio,
+		NombreServicio
+	
+		FROM dbo.Servicio 
+		WHERE
+		(@IdServicio IS NULL OR IdServicio = @IdServicio)
 
 END

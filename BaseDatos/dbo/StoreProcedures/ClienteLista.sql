@@ -1,14 +1,16 @@
-﻿CREATE PROCEDURE [dbo].[ClienteLista]
-	AS
-BEGIN 
+﻿CREATE PROCEDURE [dbo].[Clientelista]
+
+
+AS BEGIN
 	SET NOCOUNT ON
 
 	SELECT 
-	       IdCliente
-		   
-		 
-		 
-	FROM
-	    dbo.Cliente
+		IdCliente,
+		
+        Nombre  
+   
+
+		FROM dbo.Cliente 
+	
 
 END
