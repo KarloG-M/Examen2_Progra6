@@ -18,7 +18,7 @@ AS BEGIN
         c.NombreApellidosPadre  ,
         c.NombreApellidosMadre ,
         c.Pasaporte ,
-        c.CuentaIBAN V,
+        c.CuentaIBAN,
          c.CorreoNotifica 
 
 		FROM dbo.Cliente C

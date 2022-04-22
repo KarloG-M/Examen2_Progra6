@@ -16,6 +16,7 @@ namespace WBL
         Task<IEnumerable<ClienteEntity>> GET();
         Task<ClienteEntity> GETBYID(ClienteEntity entity);
         Task<DBEntity> UPDATE(ClienteEntity entity);
+        Task<IEnumerable<ClienteEntity>> GETLISTA();
     }
 
     public class ClienteService : IClienteService
@@ -65,7 +66,7 @@ namespace WBL
                 var result = sql.ExecuteAsync(sp: "dbo.ClienteInsertar", Param: new
                 {
 
-
+                  
                     entity.Identificacion,
                     entity.IdTipoIdentificacion,
                     entity.Nombre,
@@ -93,6 +94,27 @@ namespace WBL
             }
 
         }
+
+
+        //Metodolista
+
+        public async Task<IEnumerable<ClienteEntity>> GETLISTA()
+        {
+            try
+            {
+                var result = sql.QueryAsync<ClienteEntity>("dbo.Clientelista");
+                return await result;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+        }
+
+
         //Metodo update
         public async Task<DBEntity> UPDATE(ClienteEntity entity)
         {

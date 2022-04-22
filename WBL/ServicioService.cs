@@ -15,6 +15,9 @@ namespace WBL
         Task<IEnumerable<ServicioEntity>> GET();
         Task<ServicioEntity> GETBYID(ServicioEntity entity);
         Task<DBEntity> UPDATE(ServicioEntity entity);
+        Task<DBEntity> UPDATE(ClienteEntity entity);
+        Task<DBEntity> CREATE(ClienteEntity entity);
+        Task<IEnumerable<ServicioEntity>> GETLISTA();
     }
 
     public class ServicioService : IServicioService
@@ -42,6 +45,24 @@ namespace WBL
                 throw;
             }
         }
+
+
+        public async Task<IEnumerable<ServicioEntity>> GETLISTA()
+        {
+            try
+            {
+                var result = sql.QueryAsync<ServicioEntity>("dbo.Serviciolista");
+                return await result;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+        }
+
         //Metodo GetById
         public async Task<ServicioEntity> GETBYID(ServicioEntity entity)
         {
@@ -126,6 +147,18 @@ namespace WBL
             }
 
         }
+
+        public Task<DBEntity> UPDATE(ClienteEntity entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<DBEntity> CREATE(ClienteEntity entity)
+        {
+            throw new NotImplementedException();
+        }
+
+       
         #endregion
     }
 

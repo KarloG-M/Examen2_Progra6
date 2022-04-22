@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\App\Clientes\Edit.ts" />
+    <Content Remove="wwwroot\App\Clientes\Grid.ts" />
+    <Content Remove="wwwroot\App\Servicios\Edit.ts" />
     <Content Remove="wwwroot\App\Servicios\Grid.ts" />
   </ItemGroup>
 
@@ -71,6 +74,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\App\Clientes\Edit.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Clientes\Grid.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Servicios\Edit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Servicios\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\Apexchart\index.d.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\axios\index.d.ts" />
@@ -108,10 +114,6 @@
     <TypeScriptCompile Include="wwwroot\Assets\Plugin\CoreFile\CoreFile.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\Plugin\sweetalert\SwalConfig.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\Plugin\vue\VueLoaderTemplate.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\App\Clientes\" />
   </ItemGroup>
 
 </Project>
