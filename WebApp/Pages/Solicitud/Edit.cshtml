@@ -14,14 +14,14 @@
                 <div class="form-group mb-3">
                     <label for="Entity.IdCliente" class="form-label">Cliente</label>
                     <select asp-for="Entity.IdCliente" class="form-select" v-model="Entity.IdCliente"
-                            asp-items="@(new SelectList(Model.ClienteLista,"IdCliente", "Identificacion"))" required>
+                            asp-items="@(new SelectList(Model.ClienteLista,"IdCliente", "IdCliente"))" required>
                         <option value="value"></option>
                     </select>
                 </div>
                 <div class="form-group mb-3">
                     <label for="Entity.IdServicio" class="form-label">Servicio</label>
                     <select asp-for="Entity.IdServicio" class="form-select" v-model="Entity.IdServicio"
-                            asp-items="@(new SelectList(Model.ServicioLista,"IdServicio", "NombreServicio"))" required>
+                            asp-items="@(new SelectList(Model.ServicioLista,"IdServicio", "IdServicio"))" required>
                         <option value="value"></option>
                     </select>
                 </div>
