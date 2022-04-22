@@ -1,8 +1,9 @@
 ﻿@page
 @model WebApp.Pages.Clientes.EditModel
 @{
+<< Mainor
 
-    <div id="AppEdit" class="container">
+    <div id="AppEdit" class="container"><<<
         <div class="card">
             <div class="card-header">
                 @(Model.id.HasValue?"Actualizar":"Nuevo")
@@ -104,4 +105,5 @@
         <script defer src="~/App/Cliente/Edit.js"></script>
 
     }
+
 }

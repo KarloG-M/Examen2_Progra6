@@ -10,6 +10,8 @@
     <Content Remove="wwwroot\App\Clientes\Grid.ts" />
     <Content Remove="wwwroot\App\Servicios\Edit.ts" />
     <Content Remove="wwwroot\App\Servicios\Grid.ts" />
+    <Content Remove="wwwroot\App\Solicitud\Edit.ts" />
+    <Content Remove="wwwroot\App\Solicitud\Grid.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -78,6 +80,8 @@
     <TypeScriptCompile Include="wwwroot\App\Clientes\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\App\Servicios\Edit.ts" />
     <TypeScriptCompile Include="wwwroot\App\Servicios\Grid.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Solicitud\Edit.ts" />
+    <TypeScriptCompile Include="wwwroot\App\Solicitud\Grid.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\Apexchart\index.d.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\axios\index.d.ts" />
     <TypeScriptCompile Include="wwwroot\Assets\%40types\bootstrap-validator\bvenums.ts" />
@@ -116,4 +120,10 @@
     <TypeScriptCompile Include="wwwroot\Assets\Plugin\vue\VueLoaderTemplate.ts" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="wwwroot\App\Clientes\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtension
 </Project>

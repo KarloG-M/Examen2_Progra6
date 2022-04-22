@@ -1,4 +1,4 @@
-﻿using BD;
+
 using Entity;
 using System;
 using System.Collections.Generic;
@@ -13,6 +13,7 @@ namespace WBL
         Task<DBEntity> CREATE(ServicioEntity entity);
         Task<DBEntity> DELETE(ServicioEntity entity);
         Task<IEnumerable<ServicioEntity>> GET();
+        Task<IEnumerable<ServicioEntity>> GETLISTA();
         Task<ServicioEntity> GETBYID(ServicioEntity entity);
         Task<DBEntity> UPDATE(ServicioEntity entity);
         Task<DBEntity> UPDATE(ClienteEntity entity);
@@ -44,14 +45,12 @@ namespace WBL
 
                 throw;
             }
-        }
-
-
+        } master
         public async Task<IEnumerable<ServicioEntity>> GETLISTA()
         {
             try
             {
-                var result = sql.QueryAsync<ServicioEntity>("dbo.Serviciolista");
+
                 return await result;
             }
             catch (Exception)
@@ -59,10 +58,6 @@ namespace WBL
 
                 throw;
             }
-
-
-        }
-
         //Metodo GetById
         public async Task<ServicioEntity> GETBYID(ServicioEntity entity)
         {
